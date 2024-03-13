@@ -1,0 +1,18 @@
+def compute_gcd(x, y):
+    """
+    This function implements the Euclidean algorithm
+    to find the GCD (Greatest Common Divisor) of two numbers.
+    """
+    while(y):
+        x, y = y, x % y
+    return x
+
+def main():
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    
+    gcd = compute_gcd(num1, num2)
+    print(f"The GCD of {num1} and {num2} is: {gcd}")
+
+if __name__ == "__main__":
+    main()
