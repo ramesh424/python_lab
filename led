@@ -1,0 +1,19 @@
+import RPi.GPIO as GPIO
+import time
+
+# Use GPIO numbers not pin numbers
+GPIO.setmode(GPIO.BCM)
+
+# Set up the GPIO channel
+GPIO.setup(17, GPIO.OUT)
+
+# Loop to blink the LED
+try:
+    while True:
+        GPIO.output(17, GPIO.HIGH)  # Turn on
+        time.sleep(1)               # Wait for 1 second
+        GPIO.output(17, GPIO.LOW)   # Turn off
+        time.sleep(1)               # Wait for 1 second
+except KeyboardInterrupt:
+    # Clean up GPIO and reset pin configuration on Ctrl+C exit
+    GPIO.cleanup()
