@@ -1,0 +1,14 @@
+import numpy as np
+
+def main():
+    my_list = [1, 2, 3, 4]
+    my_tuple = (5, 6, 7, 8)
+    
+    list_array = np.array(my_list)
+    tuple_array = np.array(my_tuple)
+    
+    print(f"Array from list: {list_array}")
+    print(f"Array from tuple: {tuple_array}")
+
+if __name__ == "__main__":
+    main()
